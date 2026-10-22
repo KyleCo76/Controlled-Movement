@@ -1,0 +1,625 @@
+<?xml version='1.0' encoding='utf-8'?>
+<UserConfig>
+    <Group id="ControlledWalkSpeed" displayName="Mods.cws_menu_title.cm_player.cm_general">
+        <PresetsArray>
+            <Preset id="0" displayName="cm_default">
+                <Entry varId="CWS_Enabled" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_TrueSteps" value="false" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_TrueStepSize" value="5" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_TrueStepMax" value="1.00" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Count" value="8" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_FavoriteA" value="4" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_FavoriteB" value="8" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed01" value="0.11" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed02" value="0.30" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed03" value="0.40" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed04" value="0.60" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed05" value="0.70" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed06" value="0.80" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed07" value="0.90" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed08" value="1.00" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_MotionDiagnostics" value="false" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_DecreaseTimeMs" value="10" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_StopDestination" value="0" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_DecreaseCurve" value="1" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_FluidControls" value="false" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_CapUnavailable" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_SmoothFavorites" value="false" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_IncreaseTimeMs" value="20" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_IncreaseCurve" value="1" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_SmoothStarting" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_SmoothSteps" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_SprintThreshold" value="1.00" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_ResetAtStop" value="false" overrideGroup="ControlledWalkSpeed" />
+            </Preset>
+            <Preset id="1" displayName="cm_k">
+                <Entry varId="CWS_Enabled" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_TrueSteps" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_TrueStepSize" value="10" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_TrueStepMax" value="1.49" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Count" value="8" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_FavoriteA" value="4" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_FavoriteB" value="8" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed01" value="0.11" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed02" value="0.30" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed03" value="0.40" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed04" value="0.60" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed05" value="0.70" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed06" value="0.80" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed07" value="0.90" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_Speed08" value="1.00" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_MotionDiagnostics" value="false" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_DecreaseTimeMs" value="15" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_StopDestination" value="1" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_DecreaseCurve" value="1" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_FluidControls" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_CapUnavailable" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_SmoothFavorites" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_IncreaseTimeMs" value="20" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_IncreaseCurve" value="2" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_SmoothStarting" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_SmoothSteps" value="true" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_SprintThreshold" value="1.36" overrideGroup="ControlledWalkSpeed" />
+                <Entry varId="CWS_ResetAtStop" value="true" overrideGroup="ControlledWalkSpeed" />
+            </Preset>
+        </PresetsArray>
+        <VisibleVars>
+            <Var id="CWS_Enabled" value="true" displayName="Enable Controlled Movement" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_TrueSteps" value="false" displayName="True Steps" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_FluidControls" value="false" displayName="Fluid Controls" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_SmoothSteps" value="false" displayName="Fluid Movement - Step Changes" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_SmoothFavorites" value="false" displayName="Fluid Movement - Favorites" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_SmoothStarting" value="false" displayName="Fluid Movement - Starting" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_ResetAtStop" value="false" displayName="Fluid Movement - Stopping" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_MotionDiagnostics" value="false" displayName="Show speed changes" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_Steps" displayName="Mods.cws_menu_title.cm_player.cm_steps">
+        <VisibleVars>
+            <Var id="CWS_FavoriteA" value="3" displayName="Favorite 1 (single tap)" displayType="OPTIONS" tags="nonLocalizedName;customNames;nonLocalized" overrideGroup="ControlledWalkSpeed">
+                <OptionsArray>
+                    <Option id="0" displayName="1">
+                        <Entry varId="CWS_FavoriteA" value="1" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="1" displayName="2">
+                        <Entry varId="CWS_FavoriteA" value="2" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="2" displayName="3">
+                        <Entry varId="CWS_FavoriteA" value="3" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="3" displayName="4">
+                        <Entry varId="CWS_FavoriteA" value="4" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="4" displayName="5">
+                        <Entry varId="CWS_FavoriteA" value="5" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="5" displayName="6">
+                        <Entry varId="CWS_FavoriteA" value="6" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="6" displayName="7">
+                        <Entry varId="CWS_FavoriteA" value="7" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="7" displayName="8">
+                        <Entry varId="CWS_FavoriteA" value="8" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_FavoriteB" value="6" displayName="Favorite 2 (double tap)" displayType="OPTIONS" tags="nonLocalizedName;customNames;nonLocalized" overrideGroup="ControlledWalkSpeed">
+                <OptionsArray>
+                    <Option id="0" displayName="1">
+                        <Entry varId="CWS_FavoriteB" value="1" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="1" displayName="2">
+                        <Entry varId="CWS_FavoriteB" value="2" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="2" displayName="3">
+                        <Entry varId="CWS_FavoriteB" value="3" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="3" displayName="4">
+                        <Entry varId="CWS_FavoriteB" value="4" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="4" displayName="5">
+                        <Entry varId="CWS_FavoriteB" value="5" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="5" displayName="6">
+                        <Entry varId="CWS_FavoriteB" value="6" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="6" displayName="7">
+                        <Entry varId="CWS_FavoriteB" value="7" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="7" displayName="8">
+                        <Entry varId="CWS_FavoriteB" value="8" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_Speed01" value="0.11" displayName="Step 1 speed" displayType="SLIDER;0.11;1.49;138" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_Speed02" value="0.30" displayName="Step 2 speed" displayType="SLIDER;0.11;1.49;138" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_Speed03" value="0.60" displayName="Step 3 speed" displayType="SLIDER;0.11;1.49;138" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_Speed04" value="0.80" displayName="Step 4 speed" displayType="SLIDER;0.11;1.49;138" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_Speed05" value="0.90" displayName="Step 5 speed" displayType="SLIDER;0.11;1.49;138" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_Speed06" value="1.00" displayName="Step 6 speed" displayType="SLIDER;0.11;1.49;138" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_Speed07" value="1.20" displayName="Step 7 speed" displayType="SLIDER;0.11;1.49;138" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_Speed08" value="1.49" displayName="Step 8 speed" displayType="SLIDER;0.11;1.49;138" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_Count" value="8" displayName="Active steps" displayType="OPTIONS" tags="nonLocalizedName;customNames;nonLocalized" overrideGroup="ControlledWalkSpeed">
+                <OptionsArray>
+                    <Option id="0" displayName="3">
+                        <Entry varId="CWS_Count" value="3" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="1" displayName="4">
+                        <Entry varId="CWS_Count" value="4" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="2" displayName="5">
+                        <Entry varId="CWS_Count" value="5" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="3" displayName="6">
+                        <Entry varId="CWS_Count" value="6" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="4" displayName="7">
+                        <Entry varId="CWS_Count" value="7" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="5" displayName="8">
+                        <Entry varId="CWS_Count" value="8" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_TrueStepsOptions" displayName="Mods.cws_menu_title.cm_player.cm_true_steps">
+        <VisibleVars>
+            <Var id="CWS_TrueStepSize" value="1" displayName="True Step increment" displayType="SLIDER;1;100;99" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_TrueStepMax" value="1.49" displayName="True Step maximum" displayType="SLIDER;0.11;1.49;138" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_FluidControlsOptions" displayName="Mods.cws_menu_title.cm_player.cm_fluid_controls">
+        <VisibleVars>
+            <Var id="CWS_SprintThreshold" value="1.35" displayName="Sprint threshold" displayType="SLIDER;1.00;1.49;49" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_CapUnavailable" value="true" displayName="Cap speed when sprint is unavailable" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_FluidMovementOptions" displayName="Mods.cws_menu_title.cm_player.cm_fluid_movement">
+        <VisibleVars>
+            <Var id="CWS_IncreaseCurve" value="1" displayName="Increase curve" displayType="OPTIONS" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed">
+                <OptionsArray>
+                    <Option id="0" displayName="cm_curve_linear">
+                        <Entry varId="CWS_IncreaseCurve" value="0" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="1" displayName="cm_curve_smooth">
+                        <Entry varId="CWS_IncreaseCurve" value="1" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="2" displayName="cm_curve_build_up">
+                        <Entry varId="CWS_IncreaseCurve" value="2" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="3" displayName="cm_curve_surge">
+                        <Entry varId="CWS_IncreaseCurve" value="3" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_IncreaseTimeMs" value="20" displayName="Increase time per 0.01 (ms)" displayType="SLIDER;1;100;99" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_DecreaseCurve" value="1" displayName="Decrease curve" displayType="OPTIONS" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed">
+                <OptionsArray>
+                    <Option id="0" displayName="cm_curve_linear">
+                        <Entry varId="CWS_DecreaseCurve" value="0" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="1" displayName="cm_curve_smooth">
+                        <Entry varId="CWS_DecreaseCurve" value="1" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="2" displayName="cm_curve_build_up">
+                        <Entry varId="CWS_DecreaseCurve" value="2" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="3" displayName="cm_curve_surge">
+                        <Entry varId="CWS_DecreaseCurve" value="3" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_DecreaseTimeMs" value="10" displayName="Decrease time per 0.01 (ms)" displayType="SLIDER;1;100;99" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+            <Var id="CWS_StopDestination" value="0" displayName="Reset destination" displayType="OPTIONS" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed">
+                <OptionsArray>
+                    <Option id="0" displayName="cm_stop_favorite">
+                        <Entry varId="CWS_StopDestination" value="0" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                    <Option id="1" displayName="cm_stop_minimum">
+                        <Entry varId="CWS_StopDestination" value="1" overrideGroup="ControlledWalkSpeed" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_Horse" displayName="Mods.cws_menu_title.cm_roach.cm_roach_general">
+        <PresetsArray>
+            <Preset id="0" displayName="cm_default">
+                <Entry varId="CWS_HorseEnabled" value="true" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseTrueSteps" value="false" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseTrueStepSize" value="10" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseTrueStepMax" value="8.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseCount" value="10" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseFavoriteA" value="3" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseFavoriteB" value="8" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed01" value="0.40" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed02" value="0.50" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed03" value="1.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed04" value="1.50" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed05" value="2.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed06" value="2.50" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed07" value="3.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed08" value="4.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseMotionDiagnostics" value="false" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSmoothSteps" value="true" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSmoothFavorites" value="true" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSmoothStarting" value="true" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseIncreaseCurve" value="4" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseDecreaseCurve" value="1" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseIncreaseTimeMs" value="5" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseDecreaseTimeMs" value="3" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseResetAtStop" value="false" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseStopDestination" value="0" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed09" value="6.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed10" value="8.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseStartSpeed" value="0.40" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseTrueStepMin" value="0.40" overrideGroup="CWS_Horse" />
+            </Preset>
+            <Preset id="1" displayName="cm_k">
+                <Entry varId="CWS_HorseEnabled" value="true" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseTrueSteps" value="true" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseTrueStepSize" value="20" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseTrueStepMax" value="5.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseCount" value="10" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseFavoriteA" value="5" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseFavoriteB" value="8" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed01" value="0.40" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed02" value="0.50" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed03" value="1.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed04" value="1.50" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed05" value="2.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed06" value="2.50" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed07" value="3.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed08" value="4.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseMotionDiagnostics" value="false" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSmoothSteps" value="true" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSmoothFavorites" value="true" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSmoothStarting" value="true" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseIncreaseCurve" value="4" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseDecreaseCurve" value="2" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseIncreaseTimeMs" value="7" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseDecreaseTimeMs" value="4" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseResetAtStop" value="true" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseStopDestination" value="1" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed09" value="6.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseSpeed10" value="8.00" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseStartSpeed" value="0.80" overrideGroup="CWS_Horse" />
+                <Entry varId="CWS_HorseTrueStepMin" value="0.60" overrideGroup="CWS_Horse" />
+            </Preset>
+        </PresetsArray>
+        <VisibleVars>
+            <Var id="CWS_HorseEnabled" value="true" displayName="Enable Roach movement" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseTrueSteps" value="false" displayName="True Steps" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseMotionDiagnostics" value="false" displayName="Show speed changes" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSmoothSteps" value="true" displayName="Fluid Movement - Step Changes" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSmoothFavorites" value="true" displayName="Fluid Movement - Favorites" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSmoothStarting" value="true" displayName="Fluid Movement - Starting" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseResetAtStop" value="false" displayName="Fluid Movement - Stopping" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_HorseSteps" displayName="Mods.cws_menu_title.cm_roach.cm_roach_steps">
+        <VisibleVars>
+            <Var id="CWS_HorseCount" value="10" displayName="Active steps" displayType="OPTIONS" tags="nonLocalizedName;customNames;nonLocalized" overrideGroup="CWS_Horse">
+                <OptionsArray>
+                    <Option id="0" displayName="3">
+                        <Entry varId="CWS_HorseCount" value="3" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="1" displayName="4">
+                        <Entry varId="CWS_HorseCount" value="4" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="2" displayName="5">
+                        <Entry varId="CWS_HorseCount" value="5" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="3" displayName="6">
+                        <Entry varId="CWS_HorseCount" value="6" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="4" displayName="7">
+                        <Entry varId="CWS_HorseCount" value="7" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="5" displayName="8">
+                        <Entry varId="CWS_HorseCount" value="8" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="6" displayName="9">
+                        <Entry varId="CWS_HorseCount" value="9" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="7" displayName="10">
+                        <Entry varId="CWS_HorseCount" value="10" overrideGroup="CWS_Horse" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_HorseFavoriteA" value="3" displayName="Favorite 1 (single tap)" displayType="OPTIONS" tags="nonLocalizedName;customNames;nonLocalized" overrideGroup="CWS_Horse">
+                <OptionsArray>
+                    <Option id="0" displayName="1">
+                        <Entry varId="CWS_HorseFavoriteA" value="1" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="1" displayName="2">
+                        <Entry varId="CWS_HorseFavoriteA" value="2" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="2" displayName="3">
+                        <Entry varId="CWS_HorseFavoriteA" value="3" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="3" displayName="4">
+                        <Entry varId="CWS_HorseFavoriteA" value="4" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="4" displayName="5">
+                        <Entry varId="CWS_HorseFavoriteA" value="5" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="5" displayName="6">
+                        <Entry varId="CWS_HorseFavoriteA" value="6" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="6" displayName="7">
+                        <Entry varId="CWS_HorseFavoriteA" value="7" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="7" displayName="8">
+                        <Entry varId="CWS_HorseFavoriteA" value="8" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="8" displayName="9">
+                        <Entry varId="CWS_HorseFavoriteA" value="9" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="9" displayName="10">
+                        <Entry varId="CWS_HorseFavoriteA" value="10" overrideGroup="CWS_Horse" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_HorseFavoriteB" value="8" displayName="Favorite 2 (double tap)" displayType="OPTIONS" tags="nonLocalizedName;customNames;nonLocalized" overrideGroup="CWS_Horse">
+                <OptionsArray>
+                    <Option id="0" displayName="1">
+                        <Entry varId="CWS_HorseFavoriteB" value="1" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="1" displayName="2">
+                        <Entry varId="CWS_HorseFavoriteB" value="2" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="2" displayName="3">
+                        <Entry varId="CWS_HorseFavoriteB" value="3" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="3" displayName="4">
+                        <Entry varId="CWS_HorseFavoriteB" value="4" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="4" displayName="5">
+                        <Entry varId="CWS_HorseFavoriteB" value="5" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="5" displayName="6">
+                        <Entry varId="CWS_HorseFavoriteB" value="6" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="6" displayName="7">
+                        <Entry varId="CWS_HorseFavoriteB" value="7" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="7" displayName="8">
+                        <Entry varId="CWS_HorseFavoriteB" value="8" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="8" displayName="9">
+                        <Entry varId="CWS_HorseFavoriteB" value="9" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="9" displayName="10">
+                        <Entry varId="CWS_HorseFavoriteB" value="10" overrideGroup="CWS_Horse" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_HorseSpeed01" value="0.40" displayName="Step 1 speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSpeed02" value="0.50" displayName="Step 2 speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSpeed03" value="1.00" displayName="Step 3 speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSpeed04" value="1.50" displayName="Step 4 speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSpeed05" value="2.00" displayName="Step 5 speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSpeed06" value="2.50" displayName="Step 6 speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSpeed07" value="3.00" displayName="Step 7 speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSpeed08" value="4.00" displayName="Step 8 speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSpeed09" value="6.00" displayName="Step 9 speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseSpeed10" value="8.00" displayName="Step 10 speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_HorseTrueStepsOptions" displayName="Mods.cws_menu_title.cm_roach.cm_roach_true_steps">
+        <VisibleVars>
+            <Var id="CWS_HorseTrueStepSize" value="10" displayName="True Step increment" displayType="SLIDER;1;100;99" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseTrueStepMax" value="8.00" displayName="True Step maximum" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseTrueStepMin" value="0.40" displayName="True Step minimum" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_HorseFluidMovementOptions" displayName="Mods.cws_menu_title.cm_roach.cm_roach_fluid_movement">
+        <VisibleVars>
+            <Var id="CWS_HorseIncreaseCurve" value="4" displayName="Increase curve" displayType="OPTIONS" tags="nonLocalizedName" overrideGroup="CWS_Horse">
+                <OptionsArray>
+                    <Option id="0" displayName="cm_curve_linear">
+                        <Entry varId="CWS_HorseIncreaseCurve" value="0" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="1" displayName="cm_curve_smooth">
+                        <Entry varId="CWS_HorseIncreaseCurve" value="1" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="2" displayName="cm_curve_build_up">
+                        <Entry varId="CWS_HorseIncreaseCurve" value="2" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="3" displayName="cm_curve_surge">
+                        <Entry varId="CWS_HorseIncreaseCurve" value="3" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="4" displayName="cm_curve_charge">
+                        <Entry varId="CWS_HorseIncreaseCurve" value="4" overrideGroup="CWS_Horse" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_HorseDecreaseCurve" value="1" displayName="Decrease curve" displayType="OPTIONS" tags="nonLocalizedName" overrideGroup="CWS_Horse">
+                <OptionsArray>
+                    <Option id="0" displayName="cm_curve_linear">
+                        <Entry varId="CWS_HorseDecreaseCurve" value="0" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="1" displayName="cm_curve_smooth">
+                        <Entry varId="CWS_HorseDecreaseCurve" value="1" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="2" displayName="cm_curve_build_up">
+                        <Entry varId="CWS_HorseDecreaseCurve" value="2" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="3" displayName="cm_curve_surge">
+                        <Entry varId="CWS_HorseDecreaseCurve" value="3" overrideGroup="CWS_Horse" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_HorseIncreaseTimeMs" value="5" displayName="Increase time per 0.01 (ms)" displayType="SLIDER;1;100;99" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseDecreaseTimeMs" value="3" displayName="Decrease time per 0.01 (ms)" displayType="SLIDER;1;100;99" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+            <Var id="CWS_HorseStopDestination" value="0" displayName="Reset destination" displayType="OPTIONS" tags="nonLocalizedName" overrideGroup="CWS_Horse">
+                <OptionsArray>
+                    <Option id="0" displayName="cm_stop_favorite">
+                        <Entry varId="CWS_HorseStopDestination" value="0" overrideGroup="CWS_Horse" />
+                    </Option>
+                    <Option id="1" displayName="cm_stop_minimum">
+                        <Entry varId="CWS_HorseStopDestination" value="1" overrideGroup="CWS_Horse" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_HorseStartSpeed" value="0.40" displayName="Starting speed" displayType="SLIDER;0.40;8.00;760" tags="nonLocalizedName" overrideGroup="CWS_Horse" />
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_Swimming" displayName="Mods.cws_menu_title.cm_swimming.cm_swim_general">
+        <PresetsArray>
+            <Preset id="0" displayName="cm_default">
+                <Entry varId="CWS_SwimEnabled" value="true" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimTrueSteps" value="true" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimShowSpeedChanges" value="false" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimFavoriteA" value="4" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimFavoriteB" value="8" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimStartSpeed" value="0.60" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimCount" value="8" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimSpeed01" value="0.60" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimSpeed02" value="0.60" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimSpeed03" value="0.60" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimSpeed04" value="0.60" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimSpeed05" value="0.80" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimSpeed06" value="1.00" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimSpeed07" value="1.25" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimSpeed08" value="1.49" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimSpeed09" value="2.00" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimSpeed10" value="2.00" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimTrueStepSize" value="10" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimTrueStepMin" value="0.60" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimTrueStepMax" value="1.49" overrideGroup="CWS_Swimming" />
+            </Preset>
+        </PresetsArray>
+        <VisibleVars>
+            <Var id="CWS_SwimEnabled" value="true" displayName="Swimming controls" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimTrueSteps" value="true" displayName="True Steps" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimShowSpeedChanges" value="false" displayName="Show speed changes" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_SwimmingSpeeds" displayName="Mods.cws_menu_title.cm_swimming.cm_swim_speeds">
+        <VisibleVars>
+            <Var id="CWS_SwimFavoriteA" value="4" displayName="Favorite 1" displayType="OPTIONS" tags="nonLocalizedName;customNames;nonLocalized" overrideGroup="CWS_Swimming">
+                <OptionsArray>
+                    <Option id="0" displayName="1">
+                        <Entry varId="CWS_SwimFavoriteA" value="1" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="1" displayName="2">
+                        <Entry varId="CWS_SwimFavoriteA" value="2" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="2" displayName="3">
+                        <Entry varId="CWS_SwimFavoriteA" value="3" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="3" displayName="4">
+                        <Entry varId="CWS_SwimFavoriteA" value="4" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="4" displayName="5">
+                        <Entry varId="CWS_SwimFavoriteA" value="5" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="5" displayName="6">
+                        <Entry varId="CWS_SwimFavoriteA" value="6" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="6" displayName="7">
+                        <Entry varId="CWS_SwimFavoriteA" value="7" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="7" displayName="8">
+                        <Entry varId="CWS_SwimFavoriteA" value="8" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="8" displayName="9">
+                        <Entry varId="CWS_SwimFavoriteA" value="9" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="9" displayName="10">
+                        <Entry varId="CWS_SwimFavoriteA" value="10" overrideGroup="CWS_Swimming" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_SwimFavoriteB" value="8" displayName="Favorite 2" displayType="OPTIONS" tags="nonLocalizedName;customNames;nonLocalized" overrideGroup="CWS_Swimming">
+                <OptionsArray>
+                    <Option id="0" displayName="1">
+                        <Entry varId="CWS_SwimFavoriteB" value="1" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="1" displayName="2">
+                        <Entry varId="CWS_SwimFavoriteB" value="2" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="2" displayName="3">
+                        <Entry varId="CWS_SwimFavoriteB" value="3" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="3" displayName="4">
+                        <Entry varId="CWS_SwimFavoriteB" value="4" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="4" displayName="5">
+                        <Entry varId="CWS_SwimFavoriteB" value="5" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="5" displayName="6">
+                        <Entry varId="CWS_SwimFavoriteB" value="6" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="6" displayName="7">
+                        <Entry varId="CWS_SwimFavoriteB" value="7" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="7" displayName="8">
+                        <Entry varId="CWS_SwimFavoriteB" value="8" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="8" displayName="9">
+                        <Entry varId="CWS_SwimFavoriteB" value="9" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="9" displayName="10">
+                        <Entry varId="CWS_SwimFavoriteB" value="10" overrideGroup="CWS_Swimming" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_SwimStartSpeed" value="0.60" displayName="Speed after stopping" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimCount" value="8" displayName="Active steps" displayType="OPTIONS" tags="nonLocalizedName;customNames;nonLocalized" overrideGroup="CWS_Swimming">
+                <OptionsArray>
+                    <Option id="0" displayName="3">
+                        <Entry varId="CWS_SwimCount" value="3" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="1" displayName="4">
+                        <Entry varId="CWS_SwimCount" value="4" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="2" displayName="5">
+                        <Entry varId="CWS_SwimCount" value="5" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="3" displayName="6">
+                        <Entry varId="CWS_SwimCount" value="6" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="4" displayName="7">
+                        <Entry varId="CWS_SwimCount" value="7" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="5" displayName="8">
+                        <Entry varId="CWS_SwimCount" value="8" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="6" displayName="9">
+                        <Entry varId="CWS_SwimCount" value="9" overrideGroup="CWS_Swimming" />
+                    </Option>
+                    <Option id="7" displayName="10">
+                        <Entry varId="CWS_SwimCount" value="10" overrideGroup="CWS_Swimming" />
+                    </Option>
+                </OptionsArray>
+            </Var>
+            <Var id="CWS_SwimSpeed01" value="0.60" displayName="Step 1" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimSpeed02" value="0.60" displayName="Step 2" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimSpeed03" value="0.60" displayName="Step 3" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimSpeed04" value="0.60" displayName="Step 4" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimSpeed05" value="0.80" displayName="Step 5" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimSpeed06" value="1.00" displayName="Step 6" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimSpeed07" value="1.25" displayName="Step 7" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimSpeed08" value="1.49" displayName="Step 8" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimSpeed09" value="2.00" displayName="Step 9" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimSpeed10" value="2.00" displayName="Step 10" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_SwimmingTrueStepsOptions" displayName="Mods.cws_menu_title.cm_swimming.cm_swim_true_steps">
+        <VisibleVars>
+            <Var id="CWS_SwimTrueStepSize" value="10" displayName="Increment" displayType="SLIDER;1;100;99" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimTrueStepMin" value="0.60" displayName="Minimum" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimTrueStepMax" value="1.49" displayName="Maximum" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+        </VisibleVars>
+    </Group>
+    <Group id="CWS_Controls" displayName="Mods.cws_menu_title.cm_controls">
+        <VisibleVars>
+            <Var id="CWS_RequireModifier" value="true" displayName="Require modifier key" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="ControlledWalkSpeed" />
+        </VisibleVars>
+    </Group>
+</UserConfig>

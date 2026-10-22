@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<UserConfig>
+    <Group builder="Input" id="PCInput" displayName="controls_pc" tags="keybinds">
+        <VisibleVars>
+            <Var builder="Input" id="CWSIncrease" displayName="cm_input_increase" displayType="INPUTPC" actions="CWSIncrease" />
+            <Var builder="Input" id="CWSDecrease" displayName="cm_input_decrease" displayType="INPUTPC" actions="CWSDecrease" />
+            <Var builder="Input" id="CWSIncreaseNoModifier" displayName="cm_input_increase_direct" displayType="INPUTPC" actions="CWSIncreaseNoModifier" />
+            <Var builder="Input" id="CWSDecreaseNoModifier" displayName="cm_input_decrease_direct" displayType="INPUTPC" actions="CWSDecreaseNoModifier" />
+        </VisibleVars>
+    </Group>
+</UserConfig>

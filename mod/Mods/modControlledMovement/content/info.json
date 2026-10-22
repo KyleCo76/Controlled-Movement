@@ -1,0 +1,12 @@
+{
+  "name": "controlledmovement",
+  "modName": "Controlled Movement",
+  "version": "1.4.0",
+  "gameVersion": "29",
+  "description": "Independent Player, Roach and Swimming movement controls with remappable input and presets.",
+  "author": "Kyle / modControlledMovement project",
+  "idSpace": 2000120000,
+  "workshopId": 0,
+  "dependencies": [],
+  "useLooseScripts": true
+}
