@@ -81,6 +81,8 @@ class CWS_MenuDescriptor extends SU_MenuDescriptor
         this.onHover('CWS_SwimTrueStepSize', "", "cm_help_swim_truestepsize");
         this.onHover('CWS_SwimTrueStepMin', "", "cm_help_swim_truestepmin");
         this.onHover('CWS_SwimTrueStepMax', "", "cm_help_swim_truestepmax");
+        this.onHover('CWS_SwimStartMatch', "", "cm_help_swim_startmatch");
+        this.onHover('CWS_SwimStartValue', "", "cm_help_swim_startvalue");
         this.onHover('OptionPresets', "", "cm_help_fallback");
         this.withFallbackMessage("", "cm_help_dependencies");
     }

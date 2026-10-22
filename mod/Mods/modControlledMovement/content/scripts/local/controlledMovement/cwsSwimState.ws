@@ -1,14 +1,14 @@
 // Independent swimming configuration and session selection, in integer hundredths.
 class CWS_SwimState extends CObject
 {
-    public var enabled, trueSteps, showSpeedChanges : bool;
+    public var enabled, trueSteps, showSpeedChanges, startMatch : bool;
     public var count, selected, favoriteA, favoriteB : int;
-    public var trueStepSize, trueStepMin, trueStepMax, startSpeedUnits : int;
+    public var trueStepSize, trueStepMin, trueStepMax, startSpeedUnits, startValueUnits : int;
     public var speeds : array<float>;
     private var initialized, loading, refreshing, savePending : bool;
     private var trueUnits, staticOverride, commandRevision : int;
 
-    public function CWSS_SettingCount() : int { return 20; }
+    public function CWSS_SettingCount() : int { return 22; }
 
     public function CWSS_SpeedKey(index : int) : name
     {
@@ -41,8 +41,10 @@ class CWS_SwimState extends CObject
             case 6: return 'CWS_SwimCount';
             case 17: return 'CWS_SwimTrueStepSize';
             case 18: return 'CWS_SwimTrueStepMin';
+            case 19: return 'CWS_SwimTrueStepMax';
+            case 20: return 'CWS_SwimStartMatch';
         }
-        return 'CWS_SwimTrueStepMax';
+        return 'CWS_SwimStartValue';
     }
 
     private function CWSS_DefaultSpeed(index : int) : float
@@ -136,8 +138,10 @@ class CWS_SwimState extends CObject
             case 6: return IntToString(count);
             case 17: return IntToString(trueStepSize);
             case 18: return FloatToStringPrec((float)trueStepMin / 100.0f, 2);
+            case 19: return FloatToStringPrec((float)trueStepMax / 100.0f, 2);
+            case 20: return CWSS_Bool(startMatch);
         }
-        return FloatToStringPrec((float)trueStepMax / 100.0f, 2);
+        return FloatToStringPrec((float)startValueUnits / 100.0f, 2);
     }
 
     public function CWSS_Load(optional deferSave : bool)
@@ -162,6 +166,8 @@ class CWS_SwimState extends CObject
         trueStepSize = CWSS_Int('CWS_SwimTrueStepSize', 10, 1, 100);
         trueStepMin = CWSS_Units('CWS_SwimTrueStepMin', 0.60f);
         trueStepMax = Max(trueStepMin, CWSS_Units('CWS_SwimTrueStepMax', 1.49f));
+        startMatch = CWSS_Read('CWS_SwimStartMatch') != "false";
+        startValueUnits = CWSS_Units('CWS_SwimStartValue', 1.00f);
         speeds.Clear();
         for(i = 0; i < 10; i += 1)
         {
@@ -201,6 +207,13 @@ class CWS_SwimState extends CObject
     // Compatibility helper only; native startup is unchanged in this preview.
     public function CWSS_SeedUnits() : int { return Min(CWSS_ClampUnits(startSpeedUnits), CWSS_SelectedUnits()); }
     public function CWSS_CommandRevision() : int { return commandRevision; }
+
+    // Push-off playback from idle: the chosen value, or the fixed Swim start speed.
+    public function CWSS_StartUnits() : int
+    {
+        if(startMatch) return CWSS_SelectedUnits();
+        return startValueUnits;
+    }
 
     public function CWSS_SetSelectedUnits(units : int, isCommand : bool)
     {
@@ -354,6 +367,8 @@ function CWS_SwimSettingGroup(key : name) : name
         case 'CWS_SwimTrueStepSize': return 'CWS_SwimmingTrueStepsOptions';
         case 'CWS_SwimTrueStepMin': return 'CWS_SwimmingTrueStepsOptions';
         case 'CWS_SwimTrueStepMax': return 'CWS_SwimmingTrueStepsOptions';
+        case 'CWS_SwimStartMatch': return 'CWS_SwimmingSpeeds';
+        case 'CWS_SwimStartValue': return 'CWS_SwimmingSpeeds';
     }
     return '';
 }

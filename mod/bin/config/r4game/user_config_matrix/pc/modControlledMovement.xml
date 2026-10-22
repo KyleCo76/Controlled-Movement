@@ -491,6 +491,8 @@
                 <Entry varId="CWS_SwimTrueStepSize" value="10" overrideGroup="CWS_Swimming" />
                 <Entry varId="CWS_SwimTrueStepMin" value="0.60" overrideGroup="CWS_Swimming" />
                 <Entry varId="CWS_SwimTrueStepMax" value="1.49" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimStartMatch" value="true" overrideGroup="CWS_Swimming" />
+                <Entry varId="CWS_SwimStartValue" value="1.00" overrideGroup="CWS_Swimming" />
             </Preset>
         </PresetsArray>
         <VisibleVars>
@@ -608,6 +610,8 @@
             <Var id="CWS_SwimSpeed08" value="1.49" displayName="Step 8" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
             <Var id="CWS_SwimSpeed09" value="2.00" displayName="Step 9" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
             <Var id="CWS_SwimSpeed10" value="2.00" displayName="Step 10" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimStartMatch" value="true" displayName="Start matches pace" displayType="TOGGLE" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
+            <Var id="CWS_SwimStartValue" value="1.00" displayName="Swim start speed" displayType="SLIDER;0.60;2.00;140" tags="nonLocalizedName" overrideGroup="CWS_Swimming" />
         </VisibleVars>
     </Group>
     <Group id="CWS_SwimmingTrueStepsOptions" displayName="Mods.cws_menu_title.cm_swimming.cm_swim_true_steps">

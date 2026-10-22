@@ -1,7 +1,7 @@
 {
   "name": "controlledmovement_menu",
   "modName": "Controlled Movement - Hover Help",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "gameVersion": "29",
   "description": "Included compiled hover-help adapter for Controlled Movement. Enable with the core and external Sharedutils Remastered menu descriptors. Keep this module compiled for compatibility with compiled or loose dependency loading.",
   "author": "Kyle / modControlledMovement project",

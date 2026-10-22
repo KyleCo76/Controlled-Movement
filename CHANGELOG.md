@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.1 - 2026-10-21
+
+- **Smooth swim starts.** Starting to swim from a standstill no longer bursts forward at vanilla speed and then slows to a low pace. The push-off animation now follows your Swimming value.
+- **New settings** at the bottom of Swimming > Speeds: **Start matches pace** (on by default) plays the push-off at your chosen Swimming value, and **Swim start speed** (0.60 to 2.00, default 1.00, the vanilla push-off) sets a fixed push-off speed while Start matches pace is off.
+- `CM_SwimTrace(true)` now also logs the first 1.5 seconds of a start from idle.
+- Player and Roach are unchanged from 1.4.0.
+
 ## 1.4.0 - 2026-10-21
 
 - **Native Player animations.** CM no longer ships its own Player animation graph, which broke turns, releases and sprint. Fine pace control now goes through the game's own movement calculation.

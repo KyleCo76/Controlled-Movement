@@ -236,6 +236,8 @@ public function CWSS_ApplyPresetValues(config : CInGameConfigWrapper, presetInde
     config.SetVarValue(CWS_SwimSettingGroup('CWS_SwimTrueStepSize'), 'CWS_SwimTrueStepSize', CWS_SwimMenuValue('CWS_SwimTrueStepSize', "10"));
     config.SetVarValue(CWS_SwimSettingGroup('CWS_SwimTrueStepMin'), 'CWS_SwimTrueStepMin', CWS_SwimMenuValue('CWS_SwimTrueStepMin', "0.60"));
     config.SetVarValue(CWS_SwimSettingGroup('CWS_SwimTrueStepMax'), 'CWS_SwimTrueStepMax', CWS_SwimMenuValue('CWS_SwimTrueStepMax', "1.49"));
+    config.SetVarValue(CWS_SwimSettingGroup('CWS_SwimStartMatch'), 'CWS_SwimStartMatch', CWS_SwimMenuValue('CWS_SwimStartMatch', "true"));
+    config.SetVarValue(CWS_SwimSettingGroup('CWS_SwimStartValue'), 'CWS_SwimStartValue', CWS_SwimMenuValue('CWS_SwimStartValue', "1.00"));
 }
 
 @addField(CR4IngameMenu)

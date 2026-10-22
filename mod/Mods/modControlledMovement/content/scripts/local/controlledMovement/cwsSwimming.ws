@@ -274,28 +274,35 @@ public function CWSS_StateStop(eligible : bool, moving : bool, now : float)
 @addField(CR4LocomotionPlayerControllerScript) private var CWSS_activeToken : int;
 @addField(CR4LocomotionPlayerControllerScript) private var CWSS_native : float;
 @addField(CR4LocomotionPlayerControllerScript) private var CWSS_applied : float;
+@addField(CR4LocomotionPlayerControllerScript) private var CWSS_appliedStart : float;
 @addField(CR4LocomotionPlayerControllerScript) private var CWSS_ownGate : bool;
 @addField(CR4LocomotionPlayerControllerScript) private var CWSS_ownFactor : bool;
+@addField(CR4LocomotionPlayerControllerScript) private var CWSS_ownStart : bool;
 @addField(CR4LocomotionPlayerControllerScript) private var CWSS_reason : string;
 
 @addMethod(CR4LocomotionPlayerControllerScript)
 public function CWSS_ControllerRelease()
 {
     var owner : CR4Player;
-    var factor, actual : float;
-    var ownedGate, ownedFactor : bool;
+    var factor, start, actual : float;
+    var ownedGate, ownedFactor, ownedStart : bool;
     owner = CWSS_owner;
     factor = CWSS_applied;
+    start = CWSS_appliedStart;
     ownedGate = CWSS_ownGate;
     ownedFactor = CWSS_ownFactor;
+    ownedStart = CWSS_ownStart;
     CWSS_owner = NULL;
     CWSS_ownGate = false;
     CWSS_ownFactor = false;
+    CWSS_ownStart = false;
     if (!owner) return;
     actual = owner.GetBehaviorVariable('CWS_SwimGraphEnabled', -9876.5f);
     if (ownedGate && actual == 1.0f) owner.SetBehaviorVariable('CWS_SwimGraphEnabled', 0.0f);
     actual = owner.GetBehaviorVariable('CWS_SwimPlayback', -9876.5f);
     if (ownedFactor && actual == factor) owner.SetBehaviorVariable('CWS_SwimPlayback', 1.0f);
+    actual = owner.GetBehaviorVariable('CWS_SwimStartPlayback', -9876.5f);
+    if (ownedStart && actual == start) owner.SetBehaviorVariable('CWS_SwimStartPlayback', 1.0f);
 }
 
 @addMethod(CR4LocomotionPlayerControllerScript)
@@ -363,21 +370,22 @@ private function CWSS_ControllerIdle() : bool
 @addMethod(CR4LocomotionPlayerControllerScript)
 private function CWSS_ControllerIdleLease() : bool
 {
-    var gate, factor : float;
+    var gate, factor, start : float;
     if (!CWSS_ControllerScope()) return false;
     gate = player.GetBehaviorVariable('CWS_SwimGraphEnabled', -9876.5f);
     factor = player.GetBehaviorVariable('CWS_SwimPlayback', -9876.5f);
+    start = player.GetBehaviorVariable('CWS_SwimStartPlayback', -9876.5f);
     if (!CWSS_ControllerCurrent()) return false;
     if (CWSS_owner)
-        return CWSS_owner == player && CWSS_ownGate && CWSS_ownFactor
-            && gate == 1.0f && factor == CWSS_applied;
-    return gate == 0.0f && factor == 1.0f;
+        return CWSS_owner == player && CWSS_ownGate && CWSS_ownFactor && CWSS_ownStart
+            && gate == 1.0f && factor == CWSS_applied && start == CWSS_appliedStart;
+    return gate == 0.0f && factor == 1.0f && start == 1.0f;
 }
 
 @addMethod(CR4LocomotionPlayerControllerScript)
 public function CWSS_ControllerApply()
 {
-    var desired, gate, factor : float;
+    var desired, desiredStart, gate, factor, start : float;
     var accepted : bool;
     CWSS_reason = "scope";
     if (!CWSS_ControllerOrdinary() || !CWSS_ControllerMoving() || !CWSS_ControllerCurrent())
@@ -387,15 +395,19 @@ public function CWSS_ControllerApply()
     }
     gate = player.GetBehaviorVariable('CWS_SwimGraphEnabled', -9876.5f);
     factor = player.GetBehaviorVariable('CWS_SwimPlayback', -9876.5f);
+    start = player.GetBehaviorVariable('CWS_SwimStartPlayback', -9876.5f);
     if (!CWSS_ControllerOrdinary() || !CWSS_ControllerCurrent()) { CWSS_ControllerRelease(); return; }
     CWSS_reason = "foreign-or-unavailable";
-    if (CWSS_owner && (CWSS_owner != player || !CWSS_ownGate || !CWSS_ownFactor || gate != 1.0f || factor != CWSS_applied))
+    if (CWSS_owner && (CWSS_owner != player || !CWSS_ownGate || !CWSS_ownFactor || !CWSS_ownStart
+        || gate != 1.0f || factor != CWSS_applied || start != CWSS_appliedStart))
     {
         CWSS_ControllerRelease();
         return;
     }
-    if (!CWSS_owner && (gate != 0.0f || factor != 1.0f)) return;
+    if (!CWSS_owner && (gate != 0.0f || factor != 1.0f || start != 1.0f)) return;
     desired = (float)CWS_GetSwimState().CWSS_SelectedUnits() / 100.0f;
+    // The push-off from idle has its own graph route so it can follow the chosen pace.
+    desiredStart = (float)CWS_GetSwimState().CWSS_StartUnits() / 100.0f;
     if (!CWSS_ControllerCurrent()) return;
     CWSS_owner = player;
     if (!CWSS_ownFactor || factor != desired)
@@ -407,6 +419,15 @@ public function CWSS_ControllerApply()
     }
     factor = player.GetBehaviorVariable('CWS_SwimPlayback', -9876.5f);
     if (factor != desired || !CWSS_ControllerOrdinary() || !CWSS_ControllerCurrent()) { CWSS_ControllerRelease(); return; }
+    if (!CWSS_ownStart || start != desiredStart)
+    {
+        CWSS_ownStart = true;
+        CWSS_appliedStart = desiredStart;
+        accepted = player.SetBehaviorVariable('CWS_SwimStartPlayback', desiredStart);
+        if (!accepted || !CWSS_ControllerOrdinary() || !CWSS_ControllerCurrent()) { CWSS_ControllerRelease(); return; }
+    }
+    start = player.GetBehaviorVariable('CWS_SwimStartPlayback', -9876.5f);
+    if (start != desiredStart || !CWSS_ControllerOrdinary() || !CWSS_ControllerCurrent()) { CWSS_ControllerRelease(); return; }
     if (!CWSS_ownGate)
     {
         gate = player.GetBehaviorVariable('CWS_SwimGraphEnabled', -9876.5f);
@@ -417,7 +438,8 @@ public function CWSS_ControllerApply()
     }
     gate = player.GetBehaviorVariable('CWS_SwimGraphEnabled', -9876.5f);
     factor = player.GetBehaviorVariable('CWS_SwimPlayback', -9876.5f);
-    if (gate != 1.0f || factor != desired || !CWSS_ControllerOrdinary() || !CWSS_ControllerCurrent()) { CWSS_ControllerRelease(); return; }
+    start = player.GetBehaviorVariable('CWS_SwimStartPlayback', -9876.5f);
+    if (gate != 1.0f || factor != desired || start != desiredStart || !CWSS_ControllerOrdinary() || !CWSS_ControllerCurrent()) { CWSS_ControllerRelease(); return; }
     CWSS_reason = "applied";
 }
 
@@ -567,6 +589,9 @@ function OnGameEnded()
 @addField(CR4LocomotionPlayerControllerScript) private var CWSS_pointInput : CPlayerInput;
 @addField(CR4LocomotionPlayerControllerScript) private var CWSS_pointRevision : int;
 @addField(CR4LocomotionPlayerControllerScript) private var CWSS_pointEpoch : int;
+@addField(CR4LocomotionPlayerControllerScript) private var CWSS_traceIdle : bool;
+@addField(CR4LocomotionPlayerControllerScript) private var CWSS_burstArmed : bool;
+@addField(CR4LocomotionPlayerControllerScript) private var CWSS_burstTime : float;
 
 @addMethod(CR4Game)
 public function CWSS_GameTrace(enabled : bool)
@@ -588,25 +613,38 @@ exec function CM_SwimTrace(enabled : bool)
 @addMethod(CR4LocomotionPlayerControllerScript)
 private function CWSS_ControllerTrace()
 {
-    var now, elapsed, displacement, gate, factor : float;
+    var now, elapsed, displacement, gate, factor, start : float;
     var position, velocity : Vector;
     var revision : int;
+    var moving, burst : bool;
     var text : string;
-    if (!theGame.CWSS_GameTracing()) { CWSS_traceHasTime = false; CWSS_tracePoint = false; return; }
+    if (!theGame.CWSS_GameTracing()) { CWSS_traceHasTime = false; CWSS_tracePoint = false; CWSS_traceIdle = false; CWSS_burstArmed = false; return; }
     if (!CWSS_ControllerOrdinary() || CWSS_reason != "applied") CWSS_tracePoint = false;
     now = theGame.GetEngineTimeAsSeconds();
     revision = CWS_GetSwimState().CWSS_CommandRevision();
     if (CWSS_pointPlayer != player || CWSS_pointInput != CWSS_frameInput || CWSS_pointContext != CWSS_context
         || CWSS_pointRevision != revision || CWSS_pointEpoch != CWSS_frameEpoch || now < CWSS_traceTime) CWSS_tracePoint = false;
-    if (CWSS_traceHasTime && now >= CWSS_traceTime && now - CWSS_traceTime < 1.0f) return;
+    // A start from a traced idle frame logs every frame for 1.5 seconds.
+    moving = CWSS_ControllerMoving();
+    if (moving && CWSS_traceIdle) { CWSS_burstArmed = true; CWSS_burstTime = now; }
+    CWSS_traceIdle = !moving;
+    burst = moving && CWSS_burstArmed && now >= CWSS_burstTime && now - CWSS_burstTime <= 1.5f;
+    if (!burst) CWSS_burstArmed = false;
+    if (!burst && CWSS_traceHasTime && now >= CWSS_traceTime && now - CWSS_traceTime < 1.0f) return;
     CWSS_traceHasTime = true;
     CWSS_traceTime = now;
     gate = player.GetBehaviorVariable('CWS_SwimGraphEnabled', -9876.5f);
     factor = player.GetBehaviorVariable('CWS_SwimPlayback', -9876.5f);
-    text = "CM_SWIM schema=3 build=1.4.0-preview.1 selected=" + IntToString(CWS_GetSwimState().CWSS_SelectedUnits())
+    start = player.GetBehaviorVariable('CWS_SwimStartPlayback', -9876.5f);
+    text = "CM_SWIM schema=4 build=1.4.1 selected=" + IntToString(CWS_GetSwimState().CWSS_SelectedUnits())
         + " context=" + NameToString(CWSS_context) + " native=" + FloatToStringPrec(CWSS_native, 2)
         + " current=" + FloatToStringPrec(moveSpeed, 2) + " gate=" + FloatToStringPrec(gate, 2)
-        + " factor=" + FloatToStringPrec(factor, 2) + " reason=" + CWSS_reason;
+        + " factor=" + FloatToStringPrec(factor, 2) + " start=" + FloatToStringPrec(start, 2) + " reason=" + CWSS_reason;
+    if (burst)
+        text += " burst=" + FloatToStringPrec(now - CWSS_burstTime, 3) + " move=" + IntToString((int)player.playerMoveType)
+            + " gait=" + FloatToStringPrec(player.GetBehaviorVariable('playerMoveType', -9876.5f), 2)
+            + " overlay=" + FloatToStringPrec(player.GetBehaviorVariable('playerMoveTypeForOverlay', -9876.5f), 2)
+            + " ik=" + FloatToStringPrec(player.GetBehaviorVariable('ikWeight', -9876.5f), 2);
     if (CWSS_reason == "applied" && CWSS_ControllerOrdinary() && CWSS_ControllerCurrent())
     {
         velocity = player.GetMovingAgentComponent().GetVelocity();
@@ -629,6 +667,8 @@ private function CWSS_ControllerTrace()
         CWSS_pointContext = CWSS_context;
         CWSS_tracePoint = true;
     }
+    else if (burst)
+        text += " velocity=" + FloatToStringPrec(VecLength(player.GetMovingAgentComponent().GetVelocity()), 3);
     if (theGame.CWSS_GameTracing()) LogChannel('CM_SWIM', text);
 }
 // END modControlledMovement swimmingPlayback
